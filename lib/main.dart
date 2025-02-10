@@ -7,7 +7,7 @@ import 'injection_container.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  init();
+  await init();
   runApp(const MyApp());
 }
 
