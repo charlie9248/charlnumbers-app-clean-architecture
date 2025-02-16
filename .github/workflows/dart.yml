@@ -4,11 +4,13 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
 
 jobs:
   build_apk:
     name: Build Flutter (Android)
-    runs-on: mac-latest
+    runs-on: macos-14
     steps:
     - uses: actions/checkout@v4
     - name: Set Up Java
@@ -35,7 +37,7 @@ jobs:
        echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" > android/key.properties
        echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
        echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
-       echo "storeFile=keystore.jks" >> android/key.properties
+       echo "storeFile=key.jks" >> android/key.properties
         
 
     - name: Build APK
