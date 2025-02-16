@@ -29,7 +29,7 @@ android {
         release {
             keyAlias keystoreProperties['keyAlias']
             keyPassword keystoreProperties['keyPassword']
-            storePassword keystoreProperties['storePass']
+            storePassword keystoreProperties['storePassword']
             storeFile file('../keys.jks')
 
         }
