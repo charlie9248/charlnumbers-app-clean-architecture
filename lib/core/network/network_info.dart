@@ -8,6 +8,8 @@ abstract class NetworkInfo {
 
 class NetWorkInfoImpl implements NetworkInfo {
 
+
+  //this is a singleton class
   final InternetConnection internetConnection;
 
 
